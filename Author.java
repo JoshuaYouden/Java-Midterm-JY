@@ -1,14 +1,16 @@
-public class Author {
+public class Author extends LibraryItem {
     // Attributes
     private String name;
     private String birthday;
-    private LibraryItem writtenItem;
+    private int numAuthors;
+
 
     // Constructor
-    public Author(String name, String birthday, LibraryItem writtenItem) {
+    public Author(String name, String birthday) {
         this.name = name;
         this.birthday = birthday;
-        this.writtenItem = writtenItem;
+        numAuthors = 0;
+
     }
 
     public Author() {
@@ -24,11 +26,6 @@ public class Author {
     public String getBirthday() {
         return birthday;
     }
-
-    public LibraryItem getWrittenItem() {
-        return writtenItem;
-    }
-
     // Setters
     public void setName(String name) {
         this.name = name;
@@ -38,12 +35,45 @@ public class Author {
         this.birthday = birthday;
     }
 
-    public void setWrittenItem(LibraryItem writtenItem) {
-        this.writtenItem = writtenItem;
+    // Methods
+
+
+    public boolean addAuthor(String authors) {
+        for (int i = 0; i < numAuthors; i++) {
+            if (name.equals(authors)) return false;
+            }
+            name = "";
+            birthday = "";
+            numAuthors++;
+            return true;
+        }
+
+    public void editAuthor() {
     }
 
-    // Methods
+    public boolean removeAuthor(String authors) {
+        boolean found = false;
+        int authorIndex = -1;
+        for (int i = 0; i < numAuthors; i++) {
+            if (name.equals(authors)) {
+                authorIndex = i;
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            for (int i = authorIndex; i < numAuthors - 1; i++) {
+                authors = authors;
+            }
+            numAuthors--;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public String toString() {
-        return "Name: " + name + "\nBirthday: " + birthday + "\nItems Written: " + writtenItem;
+        return "Name: " + name + "\nBirthday: " + birthday + "\nItems Written: ";
     }
 }

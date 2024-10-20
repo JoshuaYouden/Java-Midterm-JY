@@ -1,3 +1,3 @@
-public class Library {
+public class Library extends LibraryItem {
     
 }

@@ -1,4 +1,4 @@
-public class Patron {
+public class Patron extends LibraryItem {
     private String name;
     private String address;
     private String phone;
@@ -65,6 +65,7 @@ public class Patron {
     }
 
     // Methods
+    @Override
     public String toString() {
         return "Name: " + name + "\nAddress: " + address + "\nPhone: " + phone + "\nBorrowed Item: " + borrowedItem + "\nPatron Type: " + patronType;
     }
