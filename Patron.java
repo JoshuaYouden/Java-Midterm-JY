@@ -9,12 +9,11 @@ public class Patron {
     private String patronType;
 
     // Constructors
-    public Patron(String name, String address, String phone, LibraryItem borrowedItem, String patronType) {
+    public Patron(String name, String address, String phone, LibraryItem borrowedItem) {
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.borrowedItem = new ArrayList<>();
-        this.patronType = patronType;
     }
 
     public Patron() {
@@ -22,7 +21,6 @@ public class Patron {
         this.address = "";
         this.phone = "";
         this.borrowedItem = new ArrayList<>();
-        this.patronType = "";
     }
 
     // Getters
