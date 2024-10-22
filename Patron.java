@@ -1,8 +1,11 @@
-public class Patron extends LibraryItem {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Patron {
     private String name;
     private String address;
     private String phone;
-    private LibraryItem borrowedItem;
+    private List<LibraryItem> borrowedItem;
     private String patronType;
 
     // Constructors
@@ -10,7 +13,7 @@ public class Patron extends LibraryItem {
         this.name = name;
         this.address = address;
         this.phone = phone;
-        this.borrowedItem = borrowedItem;
+        this.borrowedItem = new ArrayList<>();
         this.patronType = patronType;
     }
 
@@ -18,7 +21,7 @@ public class Patron extends LibraryItem {
         this.name = "";
         this.address = "";
         this.phone = "";
-        this.borrowedItem = null;
+        this.borrowedItem = new ArrayList<>();
         this.patronType = "";
     }
 
@@ -35,12 +38,12 @@ public class Patron extends LibraryItem {
         return phone;
     }
 
-    public LibraryItem getBorrowedItem() {
-        return borrowedItem;
-    }
-
     public String getPatronType() {
         return patronType;
+    }
+
+    public List<LibraryItem> getBorrowedItem() {
+        return borrowedItem;
     }
 
     // Setters
@@ -56,15 +59,16 @@ public class Patron extends LibraryItem {
         this.phone = phone;
     }
 
-    public void setBorrowedItem(LibraryItem borrowedItem) {
-        this.borrowedItem = borrowedItem;
-    }
-    
-    public void setPatronType(String patronType) {
-        this.patronType = patronType;
+    // Methods
+
+    public void borrowItem(LibraryItem item) {
+        borrowedItem.add(item);
     }
 
-    // Methods
+    public void returnItem(LibraryItem item) {
+        borrowedItem.remove(item);
+    }
+
     @Override
     public String toString() {
         return "Name: " + name + "\nAddress: " + address + "\nPhone: " + phone + "\nBorrowed Item: " + borrowedItem + "\nPatron Type: " + patronType;
