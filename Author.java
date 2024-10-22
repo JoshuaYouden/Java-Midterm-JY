@@ -1,21 +1,25 @@
-public class Author extends LibraryItem {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Author {
     // Attributes
     private String name;
     private String birthday;
-    private int numAuthors;
+    private List<LibraryItem> writtenItems;
 
 
     // Constructor
     public Author(String name, String birthday) {
         this.name = name;
         this.birthday = birthday;
-        numAuthors = 0;
+        this.writtenItems = new ArrayList<>();
 
     }
 
     public Author() {
         this.name = "";
         this.birthday = "";
+        this.writtenItems = new ArrayList<>();
     }
 
     // Getters
@@ -26,6 +30,11 @@ public class Author extends LibraryItem {
     public String getBirthday() {
         return birthday;
     }
+
+    public List<LibraryItem> getWrittenItems() {
+        return writtenItems;
+    }
+
     // Setters
     public void setName(String name) {
         this.name = name;
@@ -36,46 +45,12 @@ public class Author extends LibraryItem {
     }
 
     // Methods
-
-
-    public boolean addAuthor(String authors) {
-        for (int i = 0; i < numAuthors; i++) {
-            if (name.equals(authors)) return false;
-            }
-            name = "";
-            birthday = "";
-            numAuthors++;
-            return true;
-        }
-
-    public void editAuthor() {
-        name = new String();
-        birthday = new String();
-    }
-
-    public boolean removeAuthor(String authors) {
-        boolean found = false;
-        int authorIndex = -1;
-        for (int i = 0; i < numAuthors; i++) {
-            if (name.equals(authors)) {
-                authorIndex = i;
-                found = true;
-                break;
-            }
-        }
-        if (found) {
-            for (int i = authorIndex; i < numAuthors - 1; i++) {
-                authors = authors;
-            }
-            numAuthors--;
-            return true;
-        } else {
-            return false;
-        }
+    public void addWrittenItem(LibraryItem item) {
+        writtenItems.add(item);
     }
 
     @Override
     public String toString() {
-        return "Name: " + name + "\nBirthday: " + birthday + "\nItems Written: ";
+        return "Name: " + name + "\nBirthday: " + birthday + "\nItems Written: " + writtenItems;
     }
 }
