@@ -49,6 +49,11 @@ public class Author {
         writtenItems.add(item);
     }
 
+    public void editAuthor(String name, String birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+
     @Override
     public String toString() {
         return "Name: " + name + "\nBirthday: " + birthday + "\nItems Written: " + writtenItems;

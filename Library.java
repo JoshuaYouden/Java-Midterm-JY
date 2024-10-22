@@ -63,13 +63,24 @@ public class Library extends Patron {
         authors.add(author);
     }
 
-    public void editAuthor(Author author) {
-        authors.remove(author);
-        authors.add(author);
+    public void editAuthor(String currentName, String newName, String newBirthday) {
+        for (Author author : authors) {
+            if (author.getName().equals(currentName)) {
+                author.editAuthor(newName, newBirthday);
+                System.out.println("Author details updated: " + newName);
+                return;
+            }
+        }
     }
 
-    public void deleteAuthor(Author author) {
-        authors.remove(author);
+    public void deleteAuthor(String name) {
+        for (Author author : authors) {
+            if (author.getName().equals(name)) {
+                authors.remove(author);
+                System.out.println("Author removed: " + name);
+                return;
+            }
+        }
     }
 
     public void addPatron(Patron patron) {
