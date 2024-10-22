@@ -49,6 +49,8 @@ public class Author extends LibraryItem {
         }
 
     public void editAuthor() {
+        name = new String();
+        birthday = new String();
     }
 
     public boolean removeAuthor(String authors) {

@@ -1,7 +1,7 @@
 public class LibraryItem {
     // Attributes
     private int id;
-    private String[] title;
+    private String title;
     private String author;
     private String ISBN;
     private String publisher;
@@ -10,6 +10,7 @@ public class LibraryItem {
     // Constructors
     public LibraryItem(int id, String title, String author, String ISBN, String publisher, int copyNum) {
         this.id = id;
+        this.title = title;
         this.author = author;
         this.ISBN = ISBN;
         this.publisher = publisher;
@@ -23,6 +24,10 @@ public class LibraryItem {
     // Getters
     public int getId() {
         return id;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public String getAuthor() {
@@ -64,12 +69,15 @@ public class LibraryItem {
 
     // Methods
     public void addItem() {
+        System.out.println("Adding item to library...");
     }
 
     public void editItem() {
+        System.out.println("Editing item in library...");
     }
 
     public void removeItem() {
+        System.out.println("Removing item from library...");
     }
 
     public String toString() {
