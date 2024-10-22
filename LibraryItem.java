@@ -67,19 +67,7 @@ public class LibraryItem {
         this.copyNum = copyNum;
     }
 
-    // Methods
-    public void addItem() {
-        System.out.println("Adding item to library...");
-    }
-
-    public void editItem() {
-        System.out.println("Editing item in library...");
-    }
-
-    public void removeItem() {
-        System.out.println("Removing item from library...");
-    }
-
+    // Method
     public String toString() {
         return "ID: " + id + "\nTitle: " + title + "\nAuthor: " + author + "\nISBN: " + ISBN + "\nPublisher: " + publisher + "\nCopy Number: " + copyNum;
     }
