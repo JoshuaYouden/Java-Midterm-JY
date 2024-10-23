@@ -30,6 +30,6 @@ public class Periodical extends LibraryItem {
     // Method
     @Override
     public String toString() {
-        return super.toString() + "\nType: " + type;
+        return super.toString() + "} Type: {" + type + "}";
     }
 }

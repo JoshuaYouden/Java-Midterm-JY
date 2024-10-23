@@ -67,8 +67,14 @@ public class Patron {
         borrowedItem.remove(item);
     }
 
+    public void editPatron(String name, String address, String phone) {
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
+    }
+
     @Override
     public String toString() {
-        return "Name: " + name + "\nAddress: " + address + "\nPhone: " + phone + "\nBorrowed Item: " + borrowedItem + "\nPatron Type: " + patronType;
+        return "Name: {" + name + "} Address: {" + address + "} Phone: {" + phone + "} Borrowed Item: {" + borrowedItem + "} Patron Type: {" + patronType + "}";
     }
 }

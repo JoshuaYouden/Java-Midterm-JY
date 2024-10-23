@@ -21,7 +21,6 @@ public class Library extends Patron {
     }
 
     // Methods
-
     public List<LibraryItem> searchItems(String query) {
         List<LibraryItem> result = new ArrayList<>();
         for (LibraryItem item : libraryItems) {
@@ -32,10 +31,31 @@ public class Library extends Patron {
         return result;
     }
 
+    public List<Author> searchAuthors(String query) {
+        List<Author> result = new ArrayList<>();
+        for (Author author : authors) {
+            if (author.getName().contains(query) || author.getBirthday().contains(query)) {
+                result.add(author);
+            }
+        }
+        return result;
+    }
+
+    public List<Patron> searchPatrons(String query) {
+        List<Patron> result = new ArrayList<>();
+        for (Patron patron : patrons) {
+            if (patron.getName().contains(query) || patron.getAddress().contains(query) || patron.getPhone().contains(query)) {
+                result.add(patron);
+            }
+        }
+        return result;
+    }
+
     public void borrowItem(Patron patron, LibraryItem item) {
         if (item.getCopyNum() > 0) {
             patron.borrowItem(item);
             item.setCopyNum(item.getCopyNum() - 1);
+            System.out.println("Item checked out: " + item.getTitle() + " by: " + patron.getName());
         } else {
             System.out.println("Item is currently checked out.");
         }
@@ -44,19 +64,30 @@ public class Library extends Patron {
     public void returnItem(Patron patron, LibraryItem item) {
         patron.returnItem(item);
         item.setCopyNum(item.getCopyNum() + 1);
+        System.out.println("Item returned: " + item.getTitle() + " by " + patron.getName());
     }
 
     public void addLibraryItem(LibraryItem item) {
         libraryItems.add(item);
     }
 
-    public void editLibraryItem(LibraryItem item) {
-        libraryItems.remove(item);
-        libraryItems.add(item);
+    public void editLibraryItem(int id, String newTitle, String newAuthor, String newISBN, String newPublisher, int newCopyNum) {
+        for (LibraryItem libraryItem : libraryItems) {
+            if (libraryItem.getId() == id) {
+                libraryItem.setTitle(newTitle);
+                libraryItem.setAuthor(newAuthor);
+                libraryItem.setISBN(newISBN);
+                libraryItem.setPublisher(newPublisher);
+                libraryItem.setCopyNum(newCopyNum);
+                System.out.println("Library item updated: " + newTitle);
+                return;
+            }
+        }
     }
 
     public void deleteLibraryItem(LibraryItem item) {
         libraryItems.remove(item);
+        System.out.println("Library item removed: " + item.getTitle());
     }
 
     public void addAuthor(Author author) {
@@ -87,12 +118,18 @@ public class Library extends Patron {
         patrons.add(patron);
     }
 
-    public void editPatron(Patron patron) {
-        patrons.remove(patron);
-        patrons.add(patron);
+    public void editPatron(String currentName, String newName, String newAddress, String newPhone) {
+        for (Patron patron : patrons) {
+            if (patron.getName().equals(currentName)) {
+                patron.editPatron(newName, newAddress, newPhone);
+                System.out.println("Patron details updated: " + newName);
+                return;
+            }
+        }
     }
 
     public void deletePatron(Patron patron) {
         patrons.remove(patron);
+        System.out.println("Patron removed: " + patron.getName());
     }
 }

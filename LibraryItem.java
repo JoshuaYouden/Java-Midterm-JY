@@ -51,6 +51,10 @@ public class LibraryItem {
         this.id = id;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public void setAuthor(String author) {
         this.author = author;
     }
@@ -69,6 +73,6 @@ public class LibraryItem {
 
     // Method
     public String toString() {
-        return "ID: " + id + "\nTitle: " + title + "\nAuthor: " + author + "\nISBN: " + ISBN + "\nPublisher: " + publisher + "\nCopy Number: " + copyNum;
+        return "ID: {" + id + "} Title: {" + title + "} Author: {" + author + "} ISBN: {" + ISBN + "} Publisher: {" + publisher + "} Copy Number: {" + copyNum;
     }
 }

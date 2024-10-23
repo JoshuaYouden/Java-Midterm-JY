@@ -56,6 +56,6 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Name: " + name + "\nBirthday: " + birthday + "\nItems Written: " + writtenItems;
+        return "Name: {" + name + "} Birthday: {" + birthday + "} Items Written: {" + writtenItems + "}";
     }
 }
