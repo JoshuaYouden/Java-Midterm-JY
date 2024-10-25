@@ -1,5 +1,5 @@
 public class Employee extends Patron {
-    // Methods
+    // Constructors
     public Employee(String name, String address, String phone) {
         super(name, address, phone, null);
     }
@@ -8,6 +8,7 @@ public class Employee extends Patron {
         super();
     }
 
+    // Method
     @Override
     public String getPatronType() {
         return "Employee";
