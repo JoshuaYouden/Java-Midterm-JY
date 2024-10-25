@@ -1,7 +1,7 @@
 /**
  * Represents an student.
  * 
- * @author [Your Name]
+ * @author [Joshua Youden]
  */
 
 public class Students extends Patron {

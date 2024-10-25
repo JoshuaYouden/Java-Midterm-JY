@@ -1,7 +1,7 @@
 /**
  * Represents a library item, such as a book or periodical.
  * 
- * @author [Your Name]
+ * @author [Joshua Youden]
  */
 
 public class LibraryItem {

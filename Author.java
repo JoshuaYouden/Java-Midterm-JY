@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Represents an author, including their name and biographical information.
  * 
- * @author [Your Name]
+ * @author [Joshua Youden]
  */
 
 public class Author {

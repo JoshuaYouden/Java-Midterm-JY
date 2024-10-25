@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Represents a patron, including their personal and contact information.
  * 
- * @author [Your Name]
+ * @author [Joshua Youden]
  */
 
 public class Patron {

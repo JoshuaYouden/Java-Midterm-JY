@@ -1,7 +1,7 @@
 /**
  * Represents a book, including its title, author, and publication information.
  * 
- * @author [Your Name]
+ * @author [Joshua Youden]
  */
 
 public class Books extends LibraryItem {

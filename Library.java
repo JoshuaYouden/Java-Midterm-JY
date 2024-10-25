@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Represents a library, including its collection of items, authors, and patrons.
  * 
- * @author [Your Name]
+ * @author [Joshua Youden]
  */
 
 public class Library extends Patron {

@@ -1,7 +1,7 @@
 /**
  * Represents an employee.
  * 
- * @author [Your Name]
+ * @author [Joshua Youden]
  */
 
 public class Employee extends Patron {

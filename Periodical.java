@@ -1,7 +1,7 @@
 /**
  * Represents a periodical, such as a journal or magazine.
  * 
- * @author [Your Name]
+ * @author [Joshua Youden]
  */
 
 public class Periodical extends LibraryItem {

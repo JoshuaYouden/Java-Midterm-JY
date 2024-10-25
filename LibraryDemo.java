@@ -1,7 +1,7 @@
 /**
  * Demonstrates the functionality of the Library class.
  * 
- * @author [Your Name]
+ * @author [Joshua Youden]
  */
 
 public class LibraryDemo {
@@ -11,7 +11,7 @@ public class LibraryDemo {
      * 
      * @param args command line arguments (not used)
      */
-    
+
     public static void main(String[] args) {
         Library library = new Library();
 
