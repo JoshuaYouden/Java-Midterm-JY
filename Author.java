@@ -22,6 +22,10 @@ public class Author {
         this.writtenItems = new ArrayList<>();
     }
 
+    
+    /** 
+     * @return String
+     */
     // Getters
     public String getName() {
         return name;

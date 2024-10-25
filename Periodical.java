@@ -18,6 +18,10 @@ public class Periodical extends LibraryItem {
         this.type = null;
     }
 
+    
+    /** 
+     * @return PeriodicalType
+     */
     // Getter and Setter
     public PeriodicalType getType() {
         return type;

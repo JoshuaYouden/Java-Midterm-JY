@@ -18,6 +18,10 @@ public class Books extends LibraryItem {
         this.type = null;
     }
 
+    
+    /** 
+     * @return BookType
+     */
     // Getter and Setter
     public BookType getType() {
         return type;

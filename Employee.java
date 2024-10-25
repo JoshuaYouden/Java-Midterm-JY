@@ -8,6 +8,10 @@ public class Employee extends Patron {
         super();
     }
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String getPatronType() {
         return "Employee";

@@ -21,6 +21,10 @@ public class LibraryItem {
         this(0, "", "", "", "", 0);
     }
 
+    
+    /** 
+     * @return int
+     */
     // Getters
     public int getId() {
         return id;

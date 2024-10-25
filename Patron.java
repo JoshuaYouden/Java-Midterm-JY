@@ -23,6 +23,10 @@ public class Patron {
         this.borrowedItem = new ArrayList<>();
     }
 
+    
+    /** 
+     * @return String
+     */
     // Getters
     public String getName() {
         return name;

@@ -20,6 +20,11 @@ public class Library extends Patron {
         this.patrons = new ArrayList<>();
     }
 
+    
+    /** 
+     * @param query
+     * @return List<LibraryItem>
+     */
     // Methods
     public List<LibraryItem> searchItems(String query) {
         List<LibraryItem> result = new ArrayList<>();
