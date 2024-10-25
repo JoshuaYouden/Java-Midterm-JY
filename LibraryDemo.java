@@ -1,8 +1,17 @@
+/**
+ * Demonstrates the functionality of the Library class.
+ * 
+ * @author [Your Name]
+ */
+
 public class LibraryDemo {
     
-    /** 
-     * @param args
+    /**
+     * Main method to run the library demo.
+     * 
+     * @param args command line arguments (not used)
      */
+    
     public static void main(String[] args) {
         Library library = new Library();
 

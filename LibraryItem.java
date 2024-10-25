@@ -1,3 +1,9 @@
+/**
+ * Represents a library item, such as a book or periodical.
+ * 
+ * @author [Your Name]
+ */
+
 public class LibraryItem {
     // Attributes
     private int id;
@@ -7,6 +13,18 @@ public class LibraryItem {
     private String publisher;
     private int copyNum;
 
+
+/**
+     * Constructs a new LibraryItem with the specified attributes.
+     * 
+     * @param id        the unique identifier of the library item
+     * @param title     the title of the library item
+     * @param author    the author of the library item
+     * @param ISBN      the International Standard Book Number of the library item
+     * @param publisher the publisher of the library item
+     * @param copyNum   the number of copies of the library item
+     */
+    
     // Constructors
     public LibraryItem(int id, String title, String author, String ISBN, String publisher, int copyNum) {
         this.id = id;
@@ -17,15 +35,18 @@ public class LibraryItem {
         this.copyNum = copyNum;
     }
 
+    /**
+     * Constructs a new LibraryItem with default attributes.
+     */
     public LibraryItem() {
         this(0, "", "", "", "", 0);
     }
-
     
-    /** 
-     * @return int
+    /**
+     * Returns the unique identifier of the library item.
+     * 
+     * @return the id of the library item
      */
-    // Getters
     public int getId() {
         return id;
     }
